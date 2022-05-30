@@ -541,7 +541,7 @@ header.mobile-menu .nav__mobile-icon > div:last-child {
 .hero {
   width: 100%;
   height: 600px;
-  background-image: url(/images/bg-pattern-intro-mobile.svg);
+  background-image: url("../images/bg-pattern-intro-mobile.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-position-x: -334px;
@@ -551,7 +551,7 @@ header.mobile-menu .nav__mobile-icon > div:last-child {
 
 @media screen and (min-width: 400px) {
   .hero {
-    background-image: url(/images/bg-pattern-intro-desktop.svg);
+    background-image: url("../images/bg-pattern-intro-desktop.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-position-x: -464px;
@@ -562,7 +562,7 @@ header.mobile-menu .nav__mobile-icon > div:last-child {
   .hero {
     width: 200%;
     height: 600px;
-    background: url(/images/bg-pattern-intro-desktop.svg);
+    background: url("/..images/bg-pattern-intro-desktop.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-position-x: -449px;
@@ -710,7 +710,7 @@ header.mobile-menu .nav__mobile-icon > div:last-child {
   .feature__section-one__image {
     width: 100%;
     height: 935px;
-    background: url("../images/illustration-editor-desktop.svg");
+    background-image: url("../images/illustration-editor-desktop.svg");
     background-position-y: 51px;
   }
 }
@@ -784,7 +784,7 @@ header.mobile-menu .nav__mobile-icon > div:last-child {
 .feature__section-two__image-phone {
   width: 100%;
   height: 48vh;
-  background: url(/images/illustration-phones-mobile.svg);
+  background: url(../images/illustration-phones-mobile.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -793,7 +793,7 @@ header.mobile-menu .nav__mobile-icon > div:last-child {
   .feature__section-two__image-phone {
     width: 100%;
     height: 60vh;
-    background: url(/images/illustration-phones.svg);
+    background: url(../images/illustration-phones.svg);
     background-repeat: no-repeat;
   }
 }
@@ -846,7 +846,7 @@ header.mobile-menu .nav__mobile-icon > div:last-child {
 .feature__image-circle-pattern {
   width: 100%;
   height: 400px;
-  background: url(/images/bg-pattern-circles-mobile.svg);
+  background: url(../images/bg-pattern-circles-mobile.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-position-y: -244px;
@@ -864,7 +864,7 @@ header.mobile-menu .nav__mobile-icon > div:last-child {
   .feature__image-circle-pattern {
     width: 100%;
     height: 400px;
-    background: url(/images/bg-pattern-circles.svg);
+    background: url(../images/bg-pattern-circles.svg);
     background-repeat: no-repeat;
     background-position-y: -500px;
     background-position-x: -215px;
@@ -897,14 +897,14 @@ header.mobile-menu .nav__mobile-icon > div:last-child {
 .feature__section-three__image {
   width: 100%;
   height: 45vh;
-  background: url(/images/illustration-laptop-mobile.svg);
+  background: url(../images/illustration-laptop-mobile.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
 
 @media screen and (min-width: 400px) {
   .feature__section-three__image {
-    background: url(/images/illustration-laptop-tab.svg);
+    background: url(../images/illustration-laptop-tab.svg);
     background-position: center;
   }
 }
@@ -913,7 +913,7 @@ header.mobile-menu .nav__mobile-icon > div:last-child {
   .feature__section-three__image {
     width: 120%;
     height: 90vh;
-    background: url(/images/illustration-laptop-desktop.svg);
+    background: url(../images/illustration-laptop-desktop.svg);
     background-repeat: no-repeat;
     background-position-x: -270px;
     margin-left: -175px;
