@@ -1,0 +1,293 @@
+header {
+  @include font-Ubuntu;
+  width: 100%;
+  position: absolute;
+  z-index: 99;
+
+  // Mobile Hamberger icon onClick transition
+  &.mobile-menu {
+    .nav__mobile-icon {
+      > div:first-child {
+        transform: translateY(9.5px) rotate(45deg);
+      }
+      > div:nth-child(2) {
+        opacity: 0;
+      }
+      > div:last-child {
+        transform: translateY(-9.5px) rotate(-45deg);
+      }
+    }
+  }
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 3.125rem;
+
+  @include onDesktop-1440 {
+    margin-top: 3.9rem;
+  }
+
+  &__section-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    @include onDesktop-1440 {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__logo {
+    img {
+      width: 83px;
+
+      @include onTablet {
+        width: 100%;
+      }
+
+      @include onDesktop-1440 {
+        width: 100%;
+      }
+    }
+  }
+
+  // Mobile Hamberger icon
+  &__mobile-icon {
+    cursor: pointer;
+
+    div {
+      height: 0.2rem;
+      border-radius: 3px;
+      background: $white;
+      transition: all 250ms ease-in-out;
+      width: 35px;
+
+      &:not(:last-child) {
+        margin-bottom: 6px;
+      }
+    }
+
+    @include onDesktop-1440 {
+      display: none;
+    }
+  }
+
+  &__links {
+    display: none;
+
+    // Tab styles
+    @include onTablet {
+    }
+
+    // Desktop styles
+    @include onDesktop-1440 {
+      display: flex;
+      align-items: center;
+      margin-left: 4.1875rem;
+      padding: 0;
+    }
+  }
+
+  &__link-item {
+    position: relative;
+    font-weight: 500;
+
+    &:not(:last-child) {
+      margin-right: 33px;
+    }
+
+    img {
+      margin-left: 5px;
+      transition: 500ms ease;
+    }
+
+    &::after {
+      content: "";
+      width: 0%;
+      height: 0.15rem;
+      border-radius: 0.625rem;
+      position: absolute;
+      background-color: $white;
+      transition: 500ms ease;
+    }
+
+    &:hover {
+      img {
+        transform: rotate(3.142rad);
+      }
+    }
+
+    &:hover::after {
+      width: 80%;
+    }
+
+    &:hover ul {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &-drop {
+      font-weight: 400;
+      position: absolute;
+      background-color: $white;
+      width: 119px;
+      padding: 2.187rem 1.6rem 2.187rem 1.6rem;
+      margin-top: 1.6rem;
+      left: -1.875rem;
+      box-shadow: 0px 12px 34px 12px rgba(0, 0, 0, 0.23);
+      border-radius: 7px;
+      opacity: 0;
+      visibility: hidden;
+      transition: 250ms ease-in-out;
+
+      &__link {
+        &:not(:last-child) {
+          margin-bottom: 1.13rem;
+        }
+        a {
+          color: $veryDarkBlue;
+          transition: 100ms ease-out;
+
+          &:hover {
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+
+  &__section-btn {
+    display: none;
+
+    @include onDesktop-1440 {
+      display: block;
+    }
+  }
+
+  &__login-btn {
+    @include font-Ubuntu;
+    cursor: pointer;
+    color: $grayishBlue;
+    font-size: $font-med;
+    font-weight: 500;
+    border: none;
+    background-color: transparent;
+    margin-right: 30px;
+    transition: 200ms ease-in-out;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  // Mobile menu styles
+  &__mobile-menu {
+    background-color: $white;
+    width: 73%;
+    position: absolute;
+    padding: 2.1875rem 1.5625rem;
+    top: 120px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    box-shadow: 0px 18px 28px 9px rgba(0, 0, 0, 0.47);
+
+    &__links {
+      @include font-Overpass;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+
+    }
+
+    &__link {
+      margin-bottom: 30px;
+
+      a {
+        color: $veryDarkBlue;
+        font-weight: 600;
+      }
+
+      img {
+        margin-left: 5px;
+      }
+
+      // mobile dropdown area
+      &-drop {
+        margin-top: 20px;
+        padding: 1.25rem 0;
+        border-radius: 5px;
+        background-color: $grayishBlue;
+        display: none;
+
+        &-link {
+          a {
+            color: $veryDarkGrayishBlue;
+          }
+
+          &:not(:last-child) {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+
+    @include onDesktop-1440 {
+      display: none;
+    }
+
+    .seperate-line {
+      width: 90%;
+      height: 0.125rem;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: $grayishBlue;
+    }
+
+    &__btns {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__mobile-login-btn {
+      @include font-Overpass;
+      border: 1px solid red;
+      background:none;
+      color: $veryDarkBlackBlue;
+      font-size: 15px;
+      font-weight: 600;
+      width: 137px;
+      height: 50px;
+      border: none;
+      border-radius: 25px;
+      margin-bottom: 5px;
+    }
+
+    &__mobile-signup-btn {
+      @include font-Ubuntu;
+      font-size: 15px;
+      font-weight: 500;
+      color: $white;
+      width: 137px;
+      height: 50px;
+      border: none;
+      background: linear-gradient(90deg, $bg-veryLightRed 10%, $lightRed 60%);
+      border-radius: 25px;
+    }
+  }
+}

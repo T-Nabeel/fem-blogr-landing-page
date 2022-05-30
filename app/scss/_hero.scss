@@ -1,0 +1,84 @@
+.hero {
+  width: 100%;
+  height: 600px;
+  background-image: url(/images/bg-pattern-intro-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-x: -334px;
+  background-position-y: -240px;
+  border-bottom-left-radius: 100px;
+
+  // Tab styles
+  @include onTablet {
+    background-image: url(/images/bg-pattern-intro-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-x: -464px;
+    // background-position-y: -1338px;
+  }
+
+  // Desktop styles
+  @include onDesktop-1440 {
+    width: 200%;
+    height: 600px;
+    background: url(/images/bg-pattern-intro-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-x: -449px;
+    background-position-y: -1338px;
+  }
+
+  &__bg-color {
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    background: linear-gradient(90deg, $bg-veryLightRed 0%, $lightRed 59%);
+    border-bottom-left-radius: 100px;
+    z-index: -1;
+  }
+
+  // Hero text
+  &__text {
+    @include font-Overpass;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    margin-top: 200px;
+
+    @include onDesktop-1440 {
+      margin-top: 240px;
+    }
+  }
+
+  &__heading {
+    color: $white;
+    margin: 0 2rem 1.68rem 2rem;
+    font-size: 2.2rem;
+
+    @include onTablet {
+      font-size: 3.8rem;
+    }
+
+    @include onDesktop-1440 {
+      font-size: 4rem;
+    }
+  }
+
+  &__summary {
+    color: $grayishBlue;
+    margin: 0 2.5rem 0 2.5rem;
+    font-size: 1.2rem;
+
+    @include onDesktop-1440 {
+      font-size: 1.37rem;
+    }
+  }
+
+  &__cta {
+    margin-top: 50px;
+
+    button:not(:last-child) {
+      margin-right: 1.25rem;
+    }
+  }
+}

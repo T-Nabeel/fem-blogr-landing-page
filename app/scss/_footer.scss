@@ -1,0 +1,92 @@
+footer {
+  @include font-Ubuntu;
+  background-color: $veryDarkBlackBlue;
+  border-top-right-radius: 100px;
+  margin-top: 6rem;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+}
+.footer {
+
+  &__logo {
+    display: grid;
+    justify-content: center;
+
+    @include onDesktop-1440 {
+      justify-content: left;
+    }
+  }
+
+  &__grid {
+    display: grid;
+
+    @include onTablet {
+      grid-template-columns: auto auto auto auto;
+    }
+    
+  }
+
+  &__grid-item {
+    text-align: center;
+    margin-top: 4rem;
+
+    @include onTablet {
+      margin-top: 0;
+    }
+
+    @include onDesktop-1440 {
+      text-align: left;
+    }
+
+
+    &__heading {
+      color: $white;
+      font-weight: 500;
+      margin-bottom: 2.5rem;
+    }
+
+    &__list {
+
+      ul {
+        padding: 0;
+        margin: 0;
+
+        li {
+
+          &:not(:last-child) {
+            margin-bottom: 1rem;
+
+            @include onTablet {
+              margin-bottom: 1.25rem;
+            }
+            
+          }
+        }
+      }
+
+      a {
+        display: inline-block;
+        position: relative;
+        color: hsl(0, 0%, 71%);
+
+        &:after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          transform: scaleX(0);
+          height: 2px;
+          bottom: -2px;
+          left: 0;
+          background-color: hsl(0, 0%, 71%);
+          transform-origin: bottom right;
+          transition: transform 250ms ease-out;
+        }
+  
+        &:hover:after {
+          transform: scaleX(1);
+          transform-origin: bottom left;
+        }
+      }
+    }
+  }
+}

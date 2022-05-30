@@ -1,0 +1,280 @@
+.feature {
+  @include font-Overpass;
+
+  // Section one
+  &__section-one {
+    @include onDesktop-1440 {
+      margin-top: 1.56rem;
+    }
+
+    &__heading {
+      margin: 100px 0 30px 0;
+      position: relative;
+      text-align: center;
+
+      @include onDesktop-1440 {
+        margin-top: 130px;
+        position: absolute;
+        text-align: center;
+        left: 0;
+        right: 0;
+      }
+    }
+
+    &__body {
+      text-align: center;
+      display: grid;
+
+      @include onDesktop-1440 {
+        text-align: left;
+        grid-template-columns: 43% 111%;
+      }
+
+      @include onDesktop-1920 {
+        grid-template-columns: 45% 101%;
+      }
+    }
+
+    &__text {
+      grid-row-end: 3;
+      margin: 35px 1px 0 10px;
+
+      p {
+        line-height: 1.8;
+        color: $veryDarkGrayishBlue;
+      }
+
+      @include onDesktop-1440 {
+        grid-row-end: auto;
+        margin-top: 270px;
+
+        h3:nth-of-type(2) {
+          margin-top: 60px;
+        }
+      }
+    }
+
+    &__image {
+      height: 335px;
+      background-image: url(/images/illustration-editor-mobile.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+
+      @include onDesktop-1440 {
+        flex: 4;
+        width: 100%;
+        height: 935px;
+        background-image: url(/images/illustration-editor-desktop.svg);
+        background-position-y: 51px;
+      }
+    }
+  }
+
+  // Section two
+  &__section-two {
+    margin-top: 260px;
+    height: 610px;
+    background: linear-gradient(
+      325deg,
+      rgba(63, 65, 100, 1) 0%,
+      rgba(44, 45, 63, 1) 49%
+    );
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+
+    @include onTablet {
+      margin-top: 70px;
+      height: 380px;
+    }
+
+    @include onDesktop-1440 {
+      margin-top: 60px;
+      height: 400px;
+      background: linear-gradient(
+        90deg,
+        $veryDarkGrayBlue 0%,
+        $veryDarkDesaturatedBlue 84%
+      );
+    }
+
+    &__body {
+      margin-top: -585px;
+
+      @include onTablet {
+        margin-top: -455px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: 46% 50%;
+        align-items: center;
+      }
+
+      @include onDesktop-1440 {
+        margin-top: -470px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: 40% 42%;
+        align-items: center;
+      }
+    }
+
+    &__image-phone {
+      width: 100%;
+      height: 48vh;
+      background: url(/images/illustration-phones-mobile.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+
+      @include onDesktop-1440 {
+        width: 100%;
+        height: 60vh;
+        background: url(/images/illustration-phones.svg);
+        background-repeat: no-repeat;
+      }
+
+      @include onDesktop-1920 {
+        height: 75vh;
+      }
+    }
+
+    &__text {
+      grid-row-end: 3;
+      color: $white;
+      margin: 0 30px 0 30px;
+      text-align: center;
+
+      @include onTablet {
+        grid-row-end: auto;
+        text-align: left;
+        margin: -20px 30px 0 20px;
+      }
+
+      @include onDesktop-1440 {
+        grid-row-end: auto;
+        text-align: left;
+        margin: 0 20px 0 40px;
+      }
+
+      h2 {
+        font-size: 38px;
+        margin-top: 25px;
+
+        @include onDesktop-1440 {
+          margin-top: 31px;
+        }
+      }
+
+      p {
+        line-height: 1.8;
+        color: $grayishBlue;
+      }
+    }
+  }
+
+  &__image-circle-pattern {
+    width: 100%;
+    height: 400px;
+    background: url(/images/bg-pattern-circles-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: -244px;
+    border-top-right-radius: 100px;
+
+    @include onTablet {
+      background-position-y: -284px;
+      background-position-x: -130px;
+    }
+
+    @include onDesktop-1440 {
+      width: 100%;
+      height: 400px;
+      background: url(/images/bg-pattern-circles.svg);
+      background-repeat: no-repeat;
+      background-position-y: -500px;
+      background-position-x: -215px;
+    }
+
+    @include onDesktop-1920 {
+      background-position-x: -205px;
+    }
+  }
+
+  // Section three
+  &__section-three {
+    margin-top: 80px;
+    display: grid;
+
+    @include onDesktop-1440 {
+      margin-top: 100px;
+      grid-template-columns: 52% 48%;
+      align-items: center;
+    }
+
+    &__image {
+      width: 100%;
+      height: 45vh;
+      background: url(/images/illustration-laptop-mobile.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+
+      @include onTablet {
+        background: url(/images/illustration-laptop-tab.svg);
+        background-position: center;
+      }
+
+      @include onDesktop-1440 {
+        // grid-row-end: auto;
+        width: 120%;
+        height: 90vh;
+        background: url(/images/illustration-laptop-desktop.svg);
+        background-repeat: no-repeat;
+        background-position-x: -270px;
+        margin-left: -175px;
+      }
+
+      @include onDesktop-1920 {
+        height: 110vh;
+      }
+    }
+
+    &__text {
+      grid-row-end: 3;
+      text-align: center;
+      margin: 0 10px 0 10px;
+
+      @include onDesktop-1440 {
+        grid-row-end: auto;
+        text-align: left;
+        margin: 0;
+      }
+
+      h3 {
+        &:nth-of-type(1) {
+          margin-top: 50px;
+
+          @include onDesktop-1440 {
+            margin-top: 0px;
+          }
+
+          @include onDesktop-1920 {
+            margin-top: 30px;
+          }
+        }
+
+        &:nth-of-type(2) {
+          margin-top: 60px;
+        }
+      }
+
+      p {
+        line-height: 1.8;
+        color: $veryDarkGrayishBlue;
+      }
+    }
+  }
+}

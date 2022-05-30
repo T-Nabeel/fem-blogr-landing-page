@@ -1,0 +1,33 @@
+  // Fonts styles
+
+  // Font Overpass
+  @mixin font-Overpass {
+    font-family: 'Overpass', sans-serif;
+  }
+
+  // Font Ubuntu
+  @mixin font-Ubuntu {
+    font-family: 'Ubuntu', sans-serif;
+  }
+
+  // Default style - Mobile
+
+  // Breakpoint for Tablet
+  @mixin onTablet {
+    @media screen and (min-width: 400px){
+      @content;
+    }
+  }
+
+  // Breakpoints for Desktop
+  @mixin onDesktop-1440 {
+    @media screen and (min-width: 811px){
+      @content;
+    }
+  }
+
+  @mixin onDesktop-1920 {
+    @media screen and (min-width: 1445px){
+      @content;
+    }
+  }
