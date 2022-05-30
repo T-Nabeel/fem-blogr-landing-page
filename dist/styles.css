@@ -710,7 +710,7 @@ header.mobile-menu .nav__mobile-icon > div:last-child {
   .feature__section-one__image {
     width: 100%;
     height: 935px;
-    background-image: url("/images/illustration-editor-desktop.svg");
+    background-image: url("https://github.com/T-Nabeel/FrontEndMentor-Blogr-Landing-Page/blob/main/images/illustration-editor-desktop.svg");
     background-position-y: 51px;
   }
 }
