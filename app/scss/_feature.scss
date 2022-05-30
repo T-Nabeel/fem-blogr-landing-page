@@ -61,7 +61,6 @@
       background-position: center;
 
       @include onDesktop-1440 {
-        flex: 4;
         width: 100%;
         height: 935px;
         background-image: url("/images/illustration-editor-desktop.svg");

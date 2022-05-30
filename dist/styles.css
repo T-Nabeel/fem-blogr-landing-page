@@ -708,9 +708,6 @@ header.mobile-menu .nav__mobile-icon > div:last-child {
 
 @media screen and (min-width: 811px) {
   .feature__section-one__image {
-    -webkit-box-flex: 4;
-        -ms-flex: 4;
-            flex: 4;
     width: 100%;
     height: 935px;
     background-image: url("/images/illustration-editor-desktop.svg");
