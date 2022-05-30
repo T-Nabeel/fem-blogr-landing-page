@@ -56,14 +56,14 @@
 
     &__image {
       height: 335px;
-      background-image: url("./images/illustration-editor-mobile.svg");
+      background-image: url("images/illustration-editor-mobile.svg");
       background-repeat: no-repeat;
       background-position: center;
 
       @include onDesktop-1440 {
         width: 100%;
         height: 935px;
-        background-image: url("./images/illustration-editor-desktop.svg");
+        background-image: url("images/illustration-editor-desktop.svg");
         background-position-y: 51px;
       }
     }
