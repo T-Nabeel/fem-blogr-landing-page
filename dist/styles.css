@@ -356,6 +356,8 @@ header.mobile-menu .nav__mobile-icon > div:last-child {
   background-color: white;
   -webkit-transition: 500ms ease;
   transition: 500ms ease;
+  bottom: -2px;
+  left: 0;
 }
 
 .nav__link-item:hover img {
