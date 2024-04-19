@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Blogr landing page](https://t-nabeel.github.io/FrontEndMentor-Blogr-Landing-Page/)
+- Live Site URL: [Blogr landing page](https://t-nabeel.github.io/fem-blogr-landing-page/)
 
 ## My process
 
